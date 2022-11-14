@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded",function(envet){
        
         resultado.classList.toggle("alert-danger");
         resultado.classList.toggle("alert-success");
-        resultado.classList.toggle("alert-warnning");
+        resultado.classList.toggle("alert-warning");
 
         if(puntos >= 6 && puntos < 12){
             texto = 'amarrillo.';
