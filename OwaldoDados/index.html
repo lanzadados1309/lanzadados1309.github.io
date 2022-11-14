@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANZAR DADOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+      
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="js/script02.js"></script>
+    <script src="js/script06.js"></script>
+   
+</head>
+<body class="body">
+    <div class="container">
+        <div class="col-12">
+            <h1>lanza dados</h1>
+             <div class="d-flex justify-content-center">
+                <div class="row">
+                
+                    <button onclick="lanzarDado()" type="button" class="btn btn-warning">lanzar dado</button>
+                    <div class="col-md-6 col-xl">dado1
+                        <div class="dados" id="dado1"></div>
+                    </div>
+                   
+                    <div class="col-md-6 col-xl">dado2
+                        <div class="dados" id="dado2"></div>
+                    </div>
+
+                    <div class="col-md-6 col-xl">dado3
+                        <div class="dados" id="dado3"></div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <div class="col-12">
+                <h2 style="color:#0000FF 3rem ;">suma de puntos</h2>
+                <button id="puntos" style="clear:left ;"type="button" class="btn btn-info"></button>
+            </div>
+        </div>
+    </div>
+   <br>
+   <div class="resumen">
+    <div class="col-12 d-flex justify-content-center">
+        <div class=" col-md-9 col-xl">
+            <label for="iPuntos" class="form-label">Puntos:</label>
+            <input type="number" name="iPuntos" id="iPuntos" 
+                class="form-control" aria-describedby="puntosHelp">
+            <div id="puntosHelp">suma puntos
+                Ingrese para categorizarlo.
+            </div>
+        </div>
+        <div class="col-md-3 col-xl">
+            <button type="button" class="btn btn-primary" 
+            id="btnEvaluar">Evaluar</button>
+        </div>
+        
+            <div class="col-md-9 col-xl">
+                <div id="resultado" class="alert alert-danger mt-3 visually-hidden"
+                role="alert">
+                </div>
+            </div>
+       
+        
+       </div>
+       
+   </div>
+   
+    
+</body>
+</html>
