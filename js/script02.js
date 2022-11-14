@@ -1,4 +1,4 @@
-function lanzarDado(){
+/*function lanzarDado(){
     var dado1 = document.getElementById("dado1");
     var dado2 = document.getElementById("dado2");
     var dado3 = document.getElementById("dado3");
@@ -19,7 +19,7 @@ function lanzarDado(){
 
     puntos.innerHTML = ""+dadoTotal+"";
    
-  }
+  }*/
 
 
 document.addEventListener("DOMContentLoaded",function(envet){
