@@ -1,5 +1,5 @@
 
-/*
+
    function lanzarDado(){
         var dado1 = document.getElementById("dado1");
         var dado2 = document.getElementById("dado2");
@@ -23,4 +23,4 @@
        
       }
 
-  */
+  
