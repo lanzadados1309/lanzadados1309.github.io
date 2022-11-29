@@ -22,7 +22,7 @@
   }*/
 
 
-document.addEventListener("DOMContentLoaded",function(envet){
+/*document.addEventListener("DOMContentLoaded",function(envet){
 
 
 
@@ -62,4 +62,133 @@ document.addEventListener("DOMContentLoaded",function(envet){
     });
    
     
-});
+});*/
+/*let datos = [];
+$("#contenido");
+
+function cargar(){
+    if(window.fetch != undefined){
+        axios({
+            method: "GET",
+            url: "https://randomuser.me/api/?results=50"
+
+            .then((resp) => {
+                console.log(resp)
+                
+            })
+
+            .catch((err) => console.log(err));
+        })
+        
+        cargar.data.datos = resp.results;    
+           
+    }
+}
+*/
+
+
+
+
+
+function cargar(){
+    if(window.fetch != undefined){
+        fetch("https://randomuser.me/api/?results=50")
+            .then((resp) => {
+                 return resp.ok == true 
+                            ? Promise.resolve(resp)
+                            : Promise.reject(resp);
+            })
+            .then((resp) => resp.json())
+            .then((resp) => {
+                datos = resp.results;
+                mostrarDatos();
+            })
+            .catch((resp) => {
+                console.log('Se produjo un error durante el proceso');
+            });
+    }else{
+        console.log('Tu navegador no soporta fetch.');
+    }
+}
+
+cargar();
+
+let inicio = 0;
+let final = 10;
+let total = 50;
+
+const mostrarDatos = () => {
+    const fragment = document.createDocumentFragment();
+    if(final >= total){
+        console.log('Completo');
+    }else{
+        for (let i = inicio; i < final; i++) {
+            const card = document.createElement("contenido");
+            var div = $("div")
+            div.animate({width: "600px"}, 1000);
+            div.animate({height: "800px"}, 1000);
+            div.animate({width: "600px"}, 1000);
+            div.animate({height: "800px"}, 1000);
+           
+            
+            const nombre = document.createElement("h2");
+            const apellido = document.createElement("h3");
+            const foto = document.createElement("img");
+           /* $(document).on("ready" , function (){
+                $(document).on("click" ,function(){
+                    $(".contenido").toggleClass("contenido");
+                    if($(".contenido").hasClass("contenido")){
+                        $(".contenido").tex("rojo");
+                    }else{
+                        $(".contenido").tex("rojo:(");
+                    }
+                })
+            })*/
+           $("#datos").click(function(){
+                $(".cards").slideDown(3000);
+            
+            })
+            $("#datos").click(function(){
+                $(".cards").slideUp(3000);
+            
+            })
+        
+            card.classList.add("cards");
+
+          
+            nombre.textContent = datos[i].name.first;
+            apellido.textContent = datos[i].name.last;
+            
+            foto.src = datos[i].picture.thumbnail;
+            card.appendChild(foto);
+            card.appendChild(apellido);
+            card.appendChild(nombre);
+            fragment.appendChild(card);
+           
+            
+        
+        }
+        inicio += 10;
+        final += 10;    
+        contenido.append(fragment);
+       
+    setObserver();
+};
+
+const setObserver = () => {
+    const options = { threshold: 0.5}
+    const observer = new IntersectionObserver(observar, options);
+    observer.observe(contenido.lastElementChild);
+}
+
+const observar = (entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            mostrarDatos();
+        }
+    })
+    
+}
+
+
+};
