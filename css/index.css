@@ -1,0 +1,10 @@
+
+
+div.carousel-indicators{
+    background-color: orangered;
+    padding: 10px;
+    color: aqua;
+}
+div.carousel{
+    padding: 20px;
+}
